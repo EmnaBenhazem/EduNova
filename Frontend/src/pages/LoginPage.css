@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+.login-wrapper {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #f3e8ff 0%, #e0e7ff 50%, #dbeafe 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.login-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1200px;
+  width: 100%;
+  background: white;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 25px 80px rgba(0,0,0,0.18);
+}
+
+.form-card {
+  padding: 3.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: white;
+}
+
+.hero-side {
+  background: linear-gradient(135deg, #7c3aed, #5b21b6);
+  color: white;
+  padding: 4rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 400px;
+}
+
+.big-icon {
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  opacity: 0.95;
+  line-height: 1.7;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #1e1b4b;
+}
+
+.logo-icon {
+  font-size: 3.2rem;
+  color: #7c3aed;
+}
+
+.form-card h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #1e1b4b;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+/* Inputs */
+.form-card input,
+.form-card select {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  border: 2px solid #e0e7ff;
+  border-radius: 16px;
+  font-size: 1rem;
+  transition: all 0.3s;
+  background: #fdfbff;
+}
+
+.form-card input:focus,
+.form-card select:focus {
+  outline: none;
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 4px rgba(124,62,237,0.15);
+}
+
+.name-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Options */
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.link {
+  color: #7c3aed;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.link:hover { text-decoration: underline; }
+
+/* Boutons */
+.btn-primary {
+  width: 100%;
+  padding: 1.1rem;
+  background: #7c3aed;
+  color: white;
+  border: none;
+  border-radius: 16px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.4s;
+  box-shadow: 0 10px 30px rgba(124,62,237,0.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(124,62,237,0.45);
+}
+
+.btn-google {
+  width: 100%;
+  padding: 1rem;
+  background: white;
+  border: 2px solid #e0e7ff;
+  border-radius: 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 1rem 0;
+  transition: all 0.3s;
+}
+
+.btn-google:hover {
+  border-color: #7c3aed;
+  background: #f8f5ff;
+}
+
+.divider {
+  text-align: center;
+  margin: 1.5rem 0;
+  color: #aaa;
+  position: relative;
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0; right: 0;
+  height: 1px;
+  background: #e0e7ff;
+}
+
+.divider span { background: white; padding: 0 1rem; }
+
+/* Switch text */
+.switch-text {
+  text-align: center;
+  margin-top: 2rem;
+  color: #666;
+  font-size: 1rem;
+}
+
+.switch-link {
+  color: #7c3aed;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.switch-link:hover { text-decoration: underline; }
+
+.error {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .login-container {
+    grid-template-columns: 1fr;
+  }
+  .hero-side { padding: 3rem 2rem; }
+  .big-icon { font-size: 4rem; }
+  .hero-content h1 { font-size: 2.4rem; }
+}
+
+@media (max-width: 576px) {
+  .form-card { padding: 2.5rem 2rem; }
+  .name-row { grid-template-columns: 1fr; }
+}
